@@ -76,21 +76,201 @@
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
 # TODO!
+Studio.destroy_all
+Movie.destroy_all
+Actor.destroy_all
+Role.destroy_all
 
 # Generate models and tables, according to the domain model.
 # TODO!
+# rails generate model Studio
+# rails generate model Movie
+# rails generate model Actor
+# rails generate model Role
+
+# rails db:migrate
+
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
 # TODO!
+studios = Studio.new
+studios["name": "Warner Bros"]
+studios.save
+
+movies = Movie.new
+movies["title": "Batman Begins"]
+movies["year_released": 2005]
+movies["rated": "PG-13"]
+movies[studio_id: 1]
+movies.save
+
+movies = Movie.new
+movies["title": "The Dark Knight"]
+movies["year_released": 2008]
+movies["rated": "PG-13"]
+movies[studio_id: 1]
+movies.save
+
+movies = Movie.new
+movies["title": "The Dark Knight Rises"]
+movies["year_released": 2012]
+movies["rated": "PG-13"]
+movies[studio_id: 1]
+movies.save
+
+#actos
+
+actors = Actor.new
+actors["name": "Christian Bale"]
+actors.save
+
+actors = Actor.new
+actors["name": "Michael Caine"]
+actors.save
+
+actors = Actor.new
+actors["name": "Liam Neeson"]
+actors.save
+
+actors = Actor.new
+actors["name": "Katie Holmes"]
+actors.save
+
+actors = Actor.new
+actors["name": "Gary Oldman"]
+actors.save
+
+actors = Actor.new
+actors["name": "Heath Ledger"]
+actors.save
+
+actors = Actor.new
+actors["name": "Aaron Eckhart"]
+actors.save
+
+actors = Actor.new
+actors["name": "Maggie Gyllenhaal"]
+actors.save
+
+actors = Actor.new
+actors["name": "Tom Hardy"]
+actors.save
+
+actors = Actor.new
+actors["name": "Joseph Gordon-Levitt"]
+actors.save
+
+actors = Actor.new
+actors["name": "Anne Hathaway"]
+actors.save
+
+
+#roles
+
+roles = Role.new
+roles["movie_id": 1]
+roles["actor_id": 1]
+roles["character_name": "Bruce Wayne"]
+roles.save
+
+roles = Role.new
+roles["movie_id": 1]
+roles["actor_id": 2]
+roles["character_name": "Alfred"]
+roles.save
+
+roles = Role.new
+roles["movie_id": 1]
+roles["actor_id": 3]
+roles["character_name": "Ra's Al Ghul"]
+roles.save
+
+roles = Role.new
+roles["movie_id": 1]
+roles["actor_id": 4]
+roles["character_name": "Rachel Dawes"]
+roles.save
+
+roles = Role.new
+roles["movie_id": 1]
+roles["actor_id": 5]
+roles["character_name": "Commissioner Gordon"]
+roles.save
+
+roles = Role.new
+roles["movie_id": 2]
+roles["actor_id": 1]
+roles["character_name": "Bruce Wayne"]
+roles.save
+
+roles = Role.new
+roles["movie_id": 2]
+roles["actor_id": 2]
+roles["character_name": "Heath Ledger"]
+roles.save
+
+roles = Role.new
+roles["movie_id": 2]
+roles["actor_id": 3]
+roles["character_name": "Aaron Eckhart"]
+roles.save
+
+roles = Role.new
+roles["movie_id": 2]
+roles["actor_id": 4]
+roles["character_name": "Alfred"]
+roles.save
+
+roles = Role.new
+roles["movie_id": 2]
+roles["actor_id": 5]
+roles["character_name": "Maggie Gyllenhaal"]
+roles.save
+
+
+roles = Role.new
+roles["movie_id": 3]
+roles["actor_id": 1]
+roles["character_name": "Bruce Wayne"]
+roles.save
+
+roles = Role.new
+roles["movie_id": 3]
+roles["actor_id": 2]
+roles["character_name": "Commissioner Gordon"]
+roles.save
+
+roles = Role.new
+roles["movie_id": 3]
+roles["actor_id": 3]
+roles["character_name": "Bane"]
+roles.save
+
+roles = Role.new
+roles["movie_id": 3]
+roles["actor_id": 4]
+roles["character_name": "John Blake"]
+roles.save
+
+roles = Role.new
+roles["movie_id": 3]
+roles["actor_id": 5]
+roles["character_name": "Sekina Kyle"]
+roles.save
+
 
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
 puts ""
 
+puts "Roles: #{Role.all.count}"
+
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
+
+
 
 # Prints a header for the cast output
 puts ""
