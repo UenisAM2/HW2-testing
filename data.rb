@@ -1,3 +1,4 @@
+
 Rails.application.eager_load!
 for model in ApplicationRecord.descendants
     puts

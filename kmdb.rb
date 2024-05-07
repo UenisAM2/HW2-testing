@@ -98,25 +98,26 @@ studios = Studio.new
 studios["name_studio"]= "Warner Bros"
 studios.save
 
+
 movies = Movie.new
 movies["title"]= "Batman Begins"
 movies["year_released"]= 2005
 movies["rated"]= "PG-13"
-movies["studio_id"]= 1
+movies["studio_id"]= studios["id"]
 movies.save
 
 movies = Movie.new
 movies["title"]= "The Dark Knight"
 movies["year_released"]= 2008
 movies["rated"]= "PG-13"
-movies["studio_id"]= 1
+movies["studio_id"]= studios["id"]
 movies.save
 
 movies = Movie.new
 movies["title"]= "The Dark Knight Rises"
 movies["year_released"]= 2012
 movies["rated"]= "PG-13"
-movies["studio_id"]= 1
+movies["studio_id"]= studios["id"]
 movies.save
 
 #actos
@@ -164,6 +165,8 @@ actors.save
 actors = Actor.new
 actors["name"]= "Anne Hathaway"
 actors.save
+
+
 
 roles = Role.new
 roles["movie_id"]= 1
@@ -262,25 +265,22 @@ puts "Movies"
 puts "======"
 puts ""
 
-puts "Movies: #{Movie.all.count}"
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
 movies = Movie.all
 
-
 for movie in movies
-    # read the relevant columns from the salesperson row
+    # read the relevant columns
     title = movie["title"]
     year_released = movie["year_released"]
     rated = movie["rated"]
     
-    puts "#{movie["studio_id"]}"
     studio = Studio.find_by({"id" =>movie["studio_id"]})
     studio_name = studio["name_studio"]
 
     # display a string with the relevant columns
-    puts "#{title} was released in #{year_released} and rated #{rated}, from studio #{studio}"
+    puts "#{title}  #{year_released}    #{rated}    #{studio_name}"
 end
 
 
@@ -292,3 +292,19 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+
+# roles = Role.all
+
+# for role in roles
+    
+#     movie_array = Movie.find_by({"id" =>role["movie_id"]})
+#     movie = movie_array["title"]
+
+#     actor_array = Actor.find_by({"id" =>role["actor_id"]})
+#     actor = actor_array["name"]
+
+#     character =  role["character_name"]
+    
+#     puts "#{movie}  #{actor}    #{character}"
+
+# end
