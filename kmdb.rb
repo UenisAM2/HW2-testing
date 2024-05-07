@@ -99,163 +99,162 @@ studios["name_studio"]= "Warner Bros"
 studios.save
 
 
-movies = Movie.new
-movies["title"]= "Batman Begins"
-movies["year_released"]= 2005
-movies["rated"]= "PG-13"
-movies["studio_id"]= studios["id"]
-movies.save
+bat_begins = Movie.new
+bat_begins["title"]= "Batman Begins"
+bat_begins["year_released"]= 2005
+bat_begins["rated"]= "PG-13"
+bat_begins["studio_id"]= studios["id"]
+bat_begins.save
 
-movies = Movie.new
-movies["title"]= "The Dark Knight"
-movies["year_released"]= 2008
-movies["rated"]= "PG-13"
-movies["studio_id"]= studios["id"]
-movies.save
+dknight = Movie.new
+dknight["title"]= "The Dark Knight"
+dknight["year_released"]= 2008
+dknight["rated"]= "PG-13"
+dknight["studio_id"]= studios["id"]
+dknight.save
 
-movies = Movie.new
-movies["title"]= "The Dark Knight Rises"
-movies["year_released"]= 2012
-movies["rated"]= "PG-13"
-movies["studio_id"]= studios["id"]
-movies.save
+dknightii = Movie.new
+dknightii["title"]= "The Dark Knight Rises"
+dknightii["year_released"]= 2012
+dknightii["rated"]= "PG-13"
+dknightii["studio_id"]= studios["id"]
+dknightii.save
 
 #actos
 
-actors = Actor.new
-actors["name"]= "Christian Bale"
-actors.save
+bale = Actor.new
+bale["name"]= "Christian Bale"
+bale.save
 
-actors = Actor.new
-actors["name"]= "Michael Caine"
-actors.save
+caine = Actor.new
+caine["name"]= "Michael Caine"
+caine.save
 
-actors = Actor.new
-actors["name"]= "Liam Neeson"
-actors.save
+neeson = Actor.new
+neeson["name"]= "Liam Neeson"
+neeson.save
 
-actors = Actor.new
-actors["name"]= "Katie Holmes"
-actors.save
+holmes = Actor.new
+holmes["name"]= "Katie Holmes"
+holmes.save
 
-actors = Actor.new
-actors["name"]= "Gary Oldman"
-actors.save
+oldman = Actor.new
+oldman["name"]= "Gary Oldman"
+oldman.save
 
-actors = Actor.new
-actors["name"]= "Heath Ledger"
-actors.save
+ledger = Actor.new
+ledger["name"]= "Heath Ledger"
+ledger.save
 
-actors = Actor.new
-actors["name"]= "Aaron Eckhart"
-actors.save
+eckhart = Actor.new
+eckhart["name"]= "Aaron Eckhart"
+eckhart.save
 
-actors = Actor.new
-actors["name"]= "Maggie Gyllenhaal"
-actors.save
+maggie = Actor.new
+maggie["name"]= "Maggie Gyllenhaal"
+maggie.save
 
-actors = Actor.new
-actors["name"]= "Tom Hardy"
-actors.save
+tom = Actor.new
+tom["name"]= "Tom Hardy"
+tom.save
 
-actors = Actor.new
-actors["name"]= "Joseph Gordon-Levitt"
-actors.save
+gordon = Actor.new
+gordon["name"]= "Joseph Gordon-Levitt"
+gordon.save
 
-actors = Actor.new
-actors["name"]= "Anne Hathaway"
-actors.save
-
+anne = Actor.new
+anne["name"]= "Anne Hathaway"
+anne.save
 
 
 roles = Role.new
-roles["movie_id"]= 1
-roles["actor_id"]= 1
+roles["movie_id"]= bat_begins["id"]
+roles["actor_id"]= bale["id"]
 roles["character_name"]= "Bruce Wayne"
 roles.save
 
 roles = Role.new
-roles["movie_id"]= 1
-roles["actor_id"]= 2
+roles["movie_id"]= bat_begins["id"]
+roles["actor_id"]= caine["id"]
 roles["character_name"]= "Alfred"
 roles.save
 
 roles = Role.new
-roles["movie_id"]= 1
-roles["actor_id"]= 3
+roles["movie_id"]= bat_begins["id"]
+roles["actor_id"]= neeson["id"]
 roles["character_name"]= "Ra's Al Ghul"
 roles.save
 
 roles = Role.new
-roles["movie_id"]= 1
-roles["actor_id"]= 4
+roles["movie_id"]= bat_begins["id"]
+roles["actor_id"]= holmes["id"]
 roles["character_name"]= "Rachel Dawes"
 roles.save
 
 roles = Role.new
-roles["movie_id"]= 1
-roles["actor_id"]= 5
+roles["movie_id"]= bat_begins["id"]
+roles["actor_id"]= oldman["id"]
 roles["character_name"]= "Commissioner Gordon"
 roles.save
 
 roles = Role.new
-roles["movie_id"]= 2
-roles["actor_id"]= 1
+roles["movie_id"]= dknight["id"]
+roles["actor_id"]= bale["id"]
 roles["character_name"]= "Bruce Wayne"
 roles.save
 
 roles = Role.new
-roles["movie_id"]= 2
-roles["actor_id"]= 2
-roles["character_name"]= "Heath Ledger"
+roles["movie_id"]= dknight["id"]
+roles["actor_id"]= ledger["id"]
+roles["character_name"]= "Joker"
 roles.save
 
 roles = Role.new
-roles["movie_id"]= 2
-roles["actor_id"]= 3
-roles["character_name"]= "Aaron Eckhart"
+roles["movie_id"]= dknight["id"]
+roles["actor_id"]= eckhart["id"]
+roles["character_name"]= "Harvey Dent"
 roles.save
 
 roles = Role.new
-roles["movie_id"]= 2
-roles["actor_id"]= 4
+roles["movie_id"]= dknight["id"]
+roles["actor_id"]= caine["id"]
 roles["character_name"]= "Alfred"
 roles.save
 
 roles = Role.new
-roles["movie_id"]= 2
-roles["actor_id"]= 5
-roles["character_name"]= "Maggie Gyllenhaal"
+roles["movie_id"]= dknight["id"]
+roles["actor_id"]= maggie["id"]
+roles["character_name"]= "Rachel Dawes"
 roles.save
 
 
 roles = Role.new
-roles["movie_id"]= 3
-roles["actor_id"]= 1
+roles["movie_id"]= dknightii["id"]
+roles["actor_id"]= bale["id"]
 roles["character_name"]= "Bruce Wayne"
 roles.save
 
 roles = Role.new
-roles["movie_id"]= 3
-roles["actor_id"]= 2
+roles["movie_id"]= dknightii["id"]
+roles["actor_id"]= oldman["id"]
 roles["character_name"]= "Commissioner Gordon"
 roles.save
 
 roles = Role.new
-roles["movie_id"]= 3
-roles["actor_id"]= 3
+roles["movie_id"]= dknightii["id"]
+roles["actor_id"]= tom["id"]
 roles["character_name"]= "Bane"
 roles.save
 
 roles = Role.new
-roles["movie_id"]= 3
-roles["actor_id"]= 4
+roles["movie_id"]= dknightii["id"]
+roles["actor_id"]= gordon["id"]
 roles["character_name"]= "John Blake"
 roles.save
 
 roles = Role.new
-roles["movie_id"]= 3
-roles["actor_id"]= 5
+roles["movie_id"]= dknightii["id"]
+roles["actor_id"]= anne["id"]
 roles["character_name"]= "Sekina Kyle"
 roles.save
 
@@ -293,18 +292,18 @@ puts ""
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
 
-# roles = Role.all
+roles = Role.all
 
-# for role in roles
+for role in roles
     
-#     movie_array = Movie.find_by({"id" =>role["movie_id"]})
-#     movie = movie_array["title"]
+    movie_array = Movie.find_by({"id" =>role["movie_id"]})
+    movie = movie_array["title"]
 
-#     actor_array = Actor.find_by({"id" =>role["actor_id"]})
-#     actor = actor_array["name"]
+    actor_array = Actor.find_by({"id" =>role["actor_id"]})
+    actor = actor_array["name"]
 
-#     character =  role["character_name"]
+    character =  role["character_name"]
     
-#     puts "#{movie}  #{actor}    #{character}"
+    puts "#{movie}  #{actor}    #{character}"
 
-# end
+end
